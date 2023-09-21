@@ -7,16 +7,17 @@ from pyrogram import filters
 
 load_dotenv()
 
-API_ID = 26304394
-API_HASH = "85c5e55c7ee6eee9fdc90234ef1b99f0"
+API_ID = int(getenv("API_ID"))
+API_HASH = getenv("API_HASH")
 
-BOT_TOKEN = "5452648544:AAHgJmBb7AJ0-6wMMN1Bei-z9QNCX-mBqPo"
+BOT_TOKEN = getenv("BOT_TOKEN")
 
-MONGO_DB_URI = "mongodb+srv://bots:2007@cluster0.gkuudck.mongodb.net/?retryWrites=true&w=majority"
-LOG_GROUP_ID = "-1001878921745"
-MUSIC_BOT_NAME = "🎸𝙎𝙇 𝙊𝙛𝙛𝙞𝙘𝙞𝙖𝙡 𝙎𝙤𝙣𝙜 𝘽𝙤𝙩 🎸"
+MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID","1001933230701"))
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "Radha X ᴍᴜsɪᴄ")
 
-OWNER_ID = 1892794121
+OWNER_ID = list(map(int, getenv("OWNER_ID", "6028912149").split()))
+
 
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
@@ -58,7 +59,7 @@ TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", "104857600"))
 TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824"))
 # https://www.gbmb.org/mb-to-bytes
 
-STRING1 = "BQGRX4oAlPv63xOd_z6PFQiLqr54EQ_CLPKcWFei7kBWfOxbMXHJmZb2ngA9RjX6Trri2u7eM1HjfmDcNCnjyBuOO_WWBp81qLe-z0BF90mROP9X9T2J-taR2BBX6Ok_Odvlbs4tSmaN_AKlaegWhXYCU2Ji9r6nDq13b_HIgdNga9fndrT2v-d45xPteUQxrFbNIzPBD4dLm53iziZ7ZNed3rFC0Hiomd7CVFB8OUt4RWf7ABcMQC9rAgEnTp5p2xT30Pctqjz1n_r8FydkcT6610kPnNIED8Bve_JiBms15C147n5LRUc4fg_z1WndnoRk8iTUL3s6Xybli2ZupUjDm2bPggAAAAFjs15fAA"
+STRING1 = getenv("STRING_SESSION", None)
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
